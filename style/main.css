@@ -1,0 +1,40 @@
+@import url(reset.css);
+
+#main{
+    background: #fafafa;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    margin: auto 0;
+    width: 100%
+}
+
+#main-sec{
+    padding-top: 30px;
+    display: flex;
+    flex-flow: row nowrap;
+    max-width: 935px;
+    flex-grow: 1;
+    position: relative;
+    width: 100%;
+    background-color: red; 
+}
+
+.left-box{
+    max-width: 614px;
+    float: left;
+    margin-right:28px;
+    width: 100%;
+    background-color: aqua;
+}
+
+.left-box .story-box{
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    margin-bottom:24px;
+    padding: 16px 0;
+    width: 614px;
+    height: 116px;
+}
