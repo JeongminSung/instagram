@@ -1,5 +1,7 @@
 @import url(reset.css);
 
+
+
 #main{
     background: #fafafa;
     display: flex;
@@ -10,31 +12,524 @@
     width: 100%
 }
 
+/* 네비게이션박스 */
+#nav{
+    display: flex;
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 9999;
+    background-color: #ffffff;
+    height: 54px;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+#nav .nav-container{
+    display: flex;
+    max-width: 935px;
+    width: 100%;
+    height: 54px;
+    margin: 0 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav .logo-box img{
+    width: 110px;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 4px;
+}
+
+#nav .logo-box{
+    min-width: 40px;
+    width: 215px;
+    max-height: 36px;
+    height: 100%
+}
+
+#nav .search-container{
+    height: 28px;
+    width: 200px;
+    position: relative;
+}
+
+#nav .search{
+    font-size: 14px;
+    background: #fafafa;
+    border:solid 1px #dbdbdb;
+    outline: 0;
+    padding: 5px 10px;
+    z-index: 2;
+    width: 100%;
+    border-radius: 3px;
+}
+#nav .search-icon-container{
+    cursor: text;
+    color: #8e8e8e;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 8px 0;
+    position: absolute;
+    left:50%;
+    top:0;
+    transform: translate(-40%,0);
+    z-index: 2;
+    display: flex;
+}
+
+#nav .search-icon{
+    font-size: 14px;
+    margin-right: 4px;
+}
+
+
+
+/* 오른쪽 아이콘 박스 */
+#nav .icon-container{
+    padding-left:24px;
+    margin-left: 15px;
+    display: flex;
+    width: 200px;
+    height: 28px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#nav .icon-box{
+    display: flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav .icon{
+    width:100%;
+}
+
+#nav .nav-profile{
+    background-color: black;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+
 #main-sec{
-    padding-top: 30px;
+    padding-top: 88px;
     display: flex;
     flex-flow: row nowrap;
     max-width: 935px;
     flex-grow: 1;
     position: relative;
     width: 100%;
-    background-color: red; 
 }
 
+/* 왼쪽 박스  */
 .left-box{
     max-width: 614px;
-    float: left;
     margin-right:28px;
     width: 100%;
-    background-color: aqua;
+    height: 100vh;
 }
 
-.left-box .story-box{
+.left-box .story-container{
     background-color: #fff;
     border: 1px solid #dbdbdb;
     border-radius: 3px;
     margin-bottom:24px;
-    padding: 16px 0;
-    width: 614px;
+    padding: 16px;
+    width: 100%;
     height: 116px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.left-box .story-box{
+    height: 82px;
+    height: 100%;
+}
+
+.left-box .story-ul{
+    display: flex;
+    flex-flow: row;
+}
+
+.left-box .story-content{
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 8px;
+}
+
+.left-box .story-profile-border{
+    width:64px;
+    height:64px;
+    border-radius: 50%;
+    background: url(../img/gradient.png) no-repeat center;
+    background-size: 64px 64px;
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.left-box .story-profile-img{
+    width:56px;
+    height:56px;
+    border-radius: 50%;
+    border:2px solid #fff;
+}
+
+.left-box .story-box p{
+    font-size: 13px;
+    max-width: 74px;
+    line-height: 14px;
+    overflow:hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+/* 피드박스 */
+.left-box .feed-squ{
+    margin-bottom: 60px;
+    border-radius: 3px;
+    border: 1px solid #dbdbdb;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+.left-box .feed-header{
+    align-items: center;
+    padding: 9px 14px;
+    border-bottom: 1px solid #dbdbdb;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-box .feed-profile-box{
+    cursor: pointer;
+    align-items: center;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+.left-box .feed-box .feed-profile-border{
+    width:42px;
+    height:42px;
+    border-radius: 50%;
+    background: url(../img/gradient.png) no-repeat center;
+    background-size: 44px 44px;
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.left-box .feed-box .feed-profile-img{
+    width:34px;
+    height:34px;
+    border-radius: 50%;
+    border:2px solid #fff;
+}
+
+.left-box .feed-id-box{
+    margin-left: 16px;
+}
+
+.left-box .feed-id{
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.left-box .feed-loc{
+    font-size: 12px;
+}
+
+.left-box .feed-btn-box{
+    width: 30px;
+    height: 100%;
+    
+}
+.left-box .feed-btn-box > button{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.left-box .feed-btn-box > button > span{
+    font-size: 20px;
+}
+
+/* 피드 사진 */
+.left-box .feed-pic-box{
+    max-height: 764px;
+    overflow: hidden;
+}
+
+.left-box .feed-pic{
+    width:100%
+}
+
+/* 피드 댓글 */
+.left-box .feed-comment-container{
+    background-color: #fff;
+}
+
+/* 피드 소셜 아이콘 */
+.feed-comment-container .comment-icon{
+    padding: 0 8px;
+    margin-top:4px;
+    display: flex;
+    justify-content: space-between;
+}
+.feed-comment-container .icon-box-left, .icon-box-right{
+    display: flex;
+    align-items: center;
+}
+.feed-comment-container .icon-button{
+    width: 40px; 
+    height: 40px;
+    padding: 8px;
+}
+.feed-comment-container .icon-img{
+    width: 24px;
+}
+
+/* 피드 좋아요 */
+.like-container{
+    padding: 0 16px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: baseline;
+}
+.like-container .like-text{
+    font-weight: 600;
+}
+.like-container .like-text-num{
+    font-weight: 700;
+    margin-right: 0.1em;
+}
+
+/* 피드 댓글창 */
+.comment-box{
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+}
+.comment-people{
+    margin-bottom: 8px;
+    display: flex;
+}
+.comment-id{
+    font-weight: 700;
+    font-size: 14px;
+    display: inline-block;
+    margin-right:4px;
+}
+.comment-content{
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+
+}
+.comment-all{
+    font-size: 14px;
+    font-weight: 500;
+    color: #8e8e8e;
+    margin-bottom: 8px;
+}
+.day-after{
+    font-size:10px;
+    letter-spacing: .2px;
+    color: #8e8e8e;
+    font-weight: 500;
+    margin: 4px 0;
+}
+.comment-add-box{
+    padding: 0 16px;
+    border-top: 1px solid #efefef;
+    font-size: 14px;
+    min-height: 56px;
+    height: 100%;
+    margin-top: 4px;
+}
+.comment-add-form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-top:20px;
+}
+#comment{
+    resize: none;
+    width: 95%;
+    height: 18px; 
+}
+.comment-btn{
+    color: #0095f6;
+    font-weight: 600px;
+    opacity: .3;
+}
+/* 오른쪽 박스 */
+
+.right-box .my-profile{
+    margin: 22px 0 10px 0;
+    padding-left: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.right-box .profile-img{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}
+
+.right-box .profile-box{
+    margin-left: 14px;
+}
+.right-box .profile-id, .profile-name{
+    white-space: nowrap;
+    text-overflow: ellipsis;  
+}
+
+.right-box .profile-id{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+.right-box .profile-name{
+    color: #8e8e8e;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.right-box .recommend-container{
+    margin: 0 0 16px -16px;
+    width: 325px;
+}
+
+.right-box .recommend-box{
+    padding: 4px 16px;
+    margin-top: 18px;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-box .recommend-text{
+    color: #8e8e8e;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    margin: -3px 0 -4;
+}
+
+.right-box .recommend-seemore{
+    font-weight: 600;
+    margin: -2px 0 -3px;
+    line-height: 14px;
+    font-size: 12px;
+}
+
+.right-box .recommend-people-box{
+    margin: 0px 4px;
+    padding: 4px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    flex-direction: column;
+}
+
+.right-box .people-box{
+    padding: 6px 12px 6px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.people-box .people-profile{
+    display: flex;
+}
+.people-box .people-img{
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    border-radius: 50%;
+}
+.people-box .followbtn-box{
+    float:right;
+}
+.people-box .followbtn{
+    color:#0095f6;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.people-box .feed-profile-border{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    background: url(../img/gradient.png) no-repeat center;
+    background-size: 42px 42px;
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-right: 8px;
+    margin-left: -4px;
+}
+
+.people-box .feed-profile-img{
+    width:32px;
+    height:32px;
+    border-radius: 50%;
+    border:2px solid #fff;
+}
+
+/* info-nav */
+
+.right-box .info-nav{
+    margin-bottom: 16px;
+    max-width: 100%;
+}
+.info-nav .info-ul{
+    margin-bottom: 3px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.info-nav .info-li>a, .copyright{
+    font-size: 11px;
+    color: #c7c7c7;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.info-nav .info-li>a::after{
+    content: '. ';
+    margin: 0.3em;
+}
+.info-nav .info-li:last-child>a::after{
+    content: none;
 }
